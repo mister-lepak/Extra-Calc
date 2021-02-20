@@ -29,7 +29,6 @@ The project has the ability to calculate total interest rates and monthly repaym
 
 Due to time limitation, the design of the tool is made to be simplified. There are some future improvements feature that can be worked on in the future:
 
-- Calculation considering Application Fee
 - API connection to established provider to get realtime interbank interest rate index
 - Sorting by most popular or best review
 - More input parameters to improve result's accuracy
