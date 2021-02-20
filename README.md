@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Housing Loan Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What is this and Why?
 
-## Available Scripts
+This project aims to provide users with more informed decision while researching for housing loans without having to talk to sales representatives.
+Helping users to get a better sense of interest rates while doing their budget planning.
 
-In the project directory, you can run:
+This tool was created in view of limitated on transparency of home loan calculator across various banks. Also, something not available in [99.co](https://www.99.co).
+As the [demand for housing in Singapore has been increasing](https://www.bloomberg.com/opinion/articles/2021-01-13/singapore-housing-market-looks-affordable-but-a-bubble-won-t-last-long) in recent years, there is business case to have a quick interest comparison tool where user can get more insightful interest rates comparison across various banks.
 
-### `npm start`
+This feature will create an opportunity for user to get first pass interest rates provided by banks without having to be hooked into sales representatives too early. Users can click 'Apply Now' to get more attractive rates from sales reps when they are ready. At the sametime, it can bring more user traffic into [99.co](https://www.99.co) and funnel more targeted prospective clients.
+Also not to mention, more traffic means more likelihood of user engagement in using [99.co](https://www.99.co) -- organically building user branding as the almighty platform for property searching.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Where to access this project?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Code Repo: https://github.com/mrlepak/Extra-Calc
 
-### `npm test`
+Github Pages: https://mrlepak.github.io/xtra-gh-pages/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How the tool works?
 
-### `npm run build`
+The project has the ability to calculate total interest rates and monthly repayment costs with minimum information below:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Housing Type
+- Principal value
+- Duration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Data Structure and Design
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Due to time limitation, the design of the tool is made to be simplified. There are some future improvements feature that can be worked on in the future:
 
-### `npm run eject`
+- Calculation considering Application Fee
+- API connection to established provider to get realtime interbank interest rate index
+- Sorting by most popular or best review
+- More input parameters to improve result's accuracy
+- Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Data Structure of the model below:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- bank_name
+- promotion_rate
+- promotion_duration
+- normal_rate
+- lock_in_period
+- housing_type
+- loan_type
+- image
+- review_rating
+- review_num
