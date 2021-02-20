@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Details from "./Details";
+import { Grid, Form } from "semantic-ui-react";
 
 const Calculator = ({ data }) => {
   const [housingType, setHousingType] = useState();
@@ -30,19 +31,19 @@ const Calculator = ({ data }) => {
   };
 
   return (
-    <div className="ui stackable grid">
-      <div className="one wide column"></div>
-      <div className="three wide column">
-        <div className="ui form">
-          <div className="field">
+    <Grid stackable padded>
+      <Grid.Column mobile={1} computer={1}></Grid.Column>
+      <Grid.Column computer={3}>
+        <Form>
+          <Form.Field>
             <label>Type of Housing</label>
             <select className="ui fluid dropdown" id="housingType">
               <option value="1">HDB</option>
               <option value="2">Private Residence</option>
               <option value="3">Commercial Property</option>
             </select>
-          </div>
-          <div className="field">
+          </Form.Field>
+          <Form.Field>
             <label>Principal in SG$</label>
             <input
               type="number"
@@ -51,8 +52,8 @@ const Calculator = ({ data }) => {
               placeholder="SGD XXX,XXX"
               id="principal"
             ></input>
-          </div>
-          <div className="field">
+          </Form.Field>
+          <Form.Field>
             <label>Loan Duration in Years</label>
             <input
               type="number"
@@ -60,14 +61,14 @@ const Calculator = ({ data }) => {
               placeholder="number of years"
               id="duration"
             ></input>
-          </div>
+          </Form.Field>
           <button className="ui button" onClick={buttonClick}>
             Submit
           </button>
-        </div>
-      </div>
+        </Form>
+      </Grid.Column>
 
-      <div className="eleven wide column">
+      <Grid.Column computer={11}>
         <Details
           data={data}
           input={{
@@ -76,8 +77,8 @@ const Calculator = ({ data }) => {
             duration: duration,
           }}
         />
-      </div>
-    </div>
+      </Grid.Column>
+    </Grid>
   );
 };
 
