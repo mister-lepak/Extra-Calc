@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Details from "./Details";
 
 const Calculator = ({ data }) => {
   const [housingType, setHousingType] = useState();
@@ -66,7 +67,16 @@ const Calculator = ({ data }) => {
         </div>
       </div>
 
-      <div className="eleven wide column"></div>
+      <div className="eleven wide column">
+        <Details
+          data={data}
+          input={{
+            housing_type: housingType,
+            principal: principal,
+            duration: duration,
+          }}
+        />
+      </div>
     </div>
   );
 };
